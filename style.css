@@ -1,0 +1,73 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: #f7f7f7;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  #formDialog {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  #formDialog input {
+    resize: none;
+    padding: 10px;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 0 0 0 2px #bcbcbc;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    font-size: 1.4rem;
+  }
+  #formDialog input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #707070;
+  }
+  .message {
+    padding: 15px;
+    margin: 10px;
+    white-space: pre-wrap;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #707070;
+  }
+  .message-bot,
+  .message-wait {
+    background: #ffffcc;
+    font-family: monospace;
+  }
+  
+  .message-user::before {
+    content: "😐 (мы): ";
+  }
+  .message-bot::before,
+  .message-wait::before {
+    content: "🤖 (бот): ";
+  }
+  
+  .dark body {
+    background: #272431;
+  }
+  .dark #formDialog input {
+    background: #5e5e5f;
+    color: #fff;
+  }
+  .dark #formDialog input::placeholder {
+    color: #adadad;
+  }
+  .dark .message {
+    background: #004fed;
+    color: #fff;
+  }
+  .dark .message-bot,
+  .dark .message-wait {
+    background: #001975;
+    color: #fff;
+  }
